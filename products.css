@@ -30,10 +30,38 @@ header .container {
   margin: 0;
 }
 
+
 nav ul {
-  list-style: none;
-  display: flex;
+  margin: 0 ;
+  padding: 0;
+  list-style-type: none;
+  display: flex; 
+  justify-content: space-around ; 
 }
+.nav1 a{
+      text-decoration: none;
+      color: whitesmoke;
+      padding: 5px 15px;
+      position: relative;
+      transition: background-color 0.3s ease; /* Add background hover transition */
+    }
+    .nav1 a:hover {
+      background-color: rgba(0, 0, 0, 0.1); /* Add background color on hover */
+    }
+    .nav1 a::after{
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: chocolate;
+      transform: scaleX(0);
+      transition: transform 1s;
+    }
+    .nav1 a:hover::after{
+      transform: scaleX(1);
+    }
 
 nav ul li {
   margin-left: 20px;
@@ -43,6 +71,7 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
 }
+
 
 .user-actions a {
   margin-left: 10px;
