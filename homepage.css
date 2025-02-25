@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+nav ul {
+  margin: 0 ;
+  padding: 0;
+  list-style-type: none;
+  display: flex; 
+  justify-content: space-around ; 
+}
+.nav1 a{
+      text-decoration: none;
+      color: whitesmoke;
+      padding: 5px 15px;
+      position: relative;
+      transition: background-color 0.3s ease; /* Add background hover transition */
+    }
+    .nav1 a:hover {
+      background-color: rgba(0, 0, 0, 0.1); /* Add background color on hover */
+    }
+    .nav1 a::after{
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: chocolate;
+      transform: scaleX(0);
+      transition: transform 1s;
+    }
+    .nav1 a:hover::after{
+      transform: scaleX(1);
+    }
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+.user-actions a {
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em; /* Increase icon size */
+}
+
+.user-actions a i {
+  vertical-align: middle;
+}
+
+
+.banner {
+  background: url('banner.jpg') no-repeat center center/cover;
+  color: #fff;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.banner-content {
+  z-index: 2;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.banner-content button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff5a5f;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* ...existing CSS... */
+
+.image-slider {
+  position: relative;
+  padding: 50px 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.slider-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Adjust height as needed */
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: auto;
+  height: 100%;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Optional: For a better user experience on touch devices */
+.slider {
+  touch-action: pan-y;
+}
+
+.newsletter-signup {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.newsletter-signup form {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-signup input {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.newsletter-signup button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff5a5f;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #ff5a5f;
+  text-decoration: none;
+  margin: 0 10px;
+}
